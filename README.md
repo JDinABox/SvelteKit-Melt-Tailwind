@@ -1,6 +1,6 @@
-# SveteKit-TailwindCSS Template
+# SvelteKit-Melt-Tailwind Template
 
-Everything you need to start building a SvelteKit app with TailwindCSS.
+Everything you need to start building a SvelteKit app with Melt UI and TailwindCSS.
 
 ## Installing
 
