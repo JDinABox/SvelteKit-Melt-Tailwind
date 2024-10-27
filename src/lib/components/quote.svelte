@@ -1,13 +1,19 @@
 <script lang="ts">
-	let cls: string = 'flex flex-col text-sm sm:text-base';
-	export { cls as class };
+	interface Props {
+		class?: string;
+		children?: import('svelte').Snippet;
+		author?: import('svelte').Snippet;
+	}
+
+	let { class: cls = 'flex flex-col text-sm sm:text-base', children, author }: Props = $props();
+	
 </script>
 
 <figure class={cls}>
 	<blockquote class="font-bold leading-tight">
-		&ldquo;<slot />&rdquo;
+		&ldquo;{@render children?.()}&rdquo;
 	</blockquote>
-	{#if $$slots.author}
-		<figcaption class="italic">- <slot name="author" /></figcaption>
+	{#if author}
+		<figcaption class="italic">- {@render author?.()}</figcaption>
 	{/if}
 </figure>
