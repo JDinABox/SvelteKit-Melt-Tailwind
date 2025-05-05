@@ -1,5 +1,3 @@
-import '../app.css';
-
 import { dark } from '$stores/theme';
 
 import { browser } from '$app/environment';
